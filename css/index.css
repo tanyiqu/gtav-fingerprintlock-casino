@@ -22,10 +22,21 @@ body {
 }
 .container main {
   width: 1250px;
-  height: 920px;
+  height: 910px;
   background: #000011;
   border: solid 2px #fafafa;
   display: flex;
+}
+.container main .head {
+  width: 100%;
+  height: 22px;
+  background: #fafafa;
+}
+.container main .head p {
+  line-height: 22px;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
 }
 .container main .left {
   width: 470px;
@@ -38,10 +49,28 @@ body {
   border: solid 2px #fafafa;
 }
 .container main .left .component {
-  margin-top: 20px;
+  margin-top: 14px;
   width: 470px;
-  height: 770px;
+  height: 766px;
   border: solid 2px #fafafa;
+}
+.container main .left .component .fragments {
+  width: 288px;
+  height: 576px;
+  margin: 18px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container main .left .component .fragments .fragment {
+  width: 144px;
+  height: 144px;
+}
+.container main .left .component .fragments .fragment .fingerprint {
+  width: 122px;
+  height: 122px;
+  margin: 11px;
+  border: solid 2px #fafafa;
+  cursor: pointer;
 }
 .container main .right {
   flex: 1;
@@ -50,8 +79,13 @@ body {
 }
 .container main .right .target {
   width: 686px;
-  height: 675px;
+  height: 665px;
   border: solid 2px #fafafa;
+}
+.container main .right .target .target-fingerprint {
+  margin: 36px 0 0 25px;
+  width: 528px;
+  height: 528px;
 }
 .container main .right .decypher {
   margin-top: 18px;

@@ -1,7 +1,7 @@
 // 入口函数
 
 const fingerprints = [
-    'imgs/fingerprints/1.bmp',
+    'imgs/fingerprints/1.png',
     'imgs/fingerprints/2.bmp',
     'imgs/fingerprints/3.bmp',
     'imgs/fingerprints/4.bmp'
