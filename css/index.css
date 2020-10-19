@@ -17,9 +17,41 @@ body {
   align-items: center;
 }
 .container main {
-  min-width: 1120px;
-  min-height: 630px;
   width: 1250px;
   height: 920px;
-  background: pink;
+  background: #000011;
+  border: solid 2px #fafafa;
+  display: flex;
+}
+.container main .left {
+  width: 470px;
+  height: 100%;
+  margin: 13px 0 0 35px;
+}
+.container main .left .timeout {
+  width: 470px;
+  height: 98px;
+  border: solid 2px #fafafa;
+}
+.container main .left .component {
+  margin-top: 20px;
+  width: 470px;
+  height: 770px;
+  border: solid 2px #fafafa;
+}
+.container main .right {
+  flex: 1;
+  height: 100%;
+  margin: 13px 0 0 22px;
+}
+.container main .right .target {
+  width: 686px;
+  height: 675px;
+  border: solid 2px #fafafa;
+}
+.container main .right .decypher {
+  margin-top: 18px;
+  width: 686px;
+  height: 195px;
+  border: solid 2px #fafafa;
 }

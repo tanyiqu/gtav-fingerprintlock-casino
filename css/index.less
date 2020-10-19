@@ -1,3 +1,11 @@
+@main-width : 1250px;
+@main-height: 920px;
+
+@background : #000011;
+@border     : solid 2px #fafafa;
+
+
+
 * {
     margin    : 0;
     padding   : 0;
@@ -8,7 +16,7 @@ html,
 body {
     width     : 100%;
     height    : 100%;
-    background: #000011;
+    background: @background;
 }
 
 
@@ -20,17 +28,51 @@ body {
     align-items    : center;
 
     main {
-        min-width : 1120px;
-        min-height: 630px;
+        width     : @main-width;
+        height    : @main-height;
+        background: @background;
 
-        width     : 1250px;
-        height    : 920px;
-        background: pink;
+        border : @border;
+        display: flex;
 
+        .left {
+            width : 470px;
+            height: 100%;
+            margin: 13px 0 0 35px;
 
-        .left {}
+            .timeout {
+                width : 470px;
+                height: 98px;
+                border: @border;
+            }
 
-        .right {}
+            .component {
+                margin-top: 20px;
+                width     : 470px;
+                height    : 770px;
+                border    : @border;
+            }
+        }
+
+        .right {
+            flex  : 1;
+            height: 100%;
+            margin: 13px 0 0 22px;
+
+            .target {
+                width : 686px;
+                height: 675px;
+                border: @border;
+            }
+
+            .decypher {
+                margin-top: 18px;
+                width     : 686px;
+                height    : 195px;
+                border    : @border;
+            }
+
+        }
 
     }
 
