@@ -24,7 +24,7 @@ $(function () {
 
 // 开启计时
 function startTimer() {
-    let m = 2;
+    let m = 3;
     let s = 59;
     let ms = 99;
 
