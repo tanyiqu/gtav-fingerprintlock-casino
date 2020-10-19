@@ -15,10 +15,11 @@ const fingerprintsFragments = [
 // 入口函数
 $(function () {
 
+    // loadAnime();
 
+    $('.pre').css('display', 'none');
+    $('.main').show(200);
     startTimer();
-
-    loadAnime();
 
 });
 
@@ -80,5 +81,29 @@ function fotmatTime(m, s, ms) {
 
 // 开始动画
 function loadAnime() {
-    
+
+    let n = 1;
+
+    // let id = setInterval(() => {
+    //     let sn = n + '';
+    //     if (sn.length < 2) {
+    //         sn = '0' + sn;
+    //     }
+    //     let src = 'imgs/pre/{0}.png'.format(sn);
+    //     $('#pre').attr('src', src);
+    //     n++;
+    //     if (n > 20) {
+    //         clearInterval(id);
+    //         setTimeout(() => {
+    //             $('.pre').css('display', 'none');
+    //             // $('.main').css('display', 'block');
+    //             $('.main').show(200);
+    //             startTimer();
+    //         }, 100);
+    //     }
+    // }, 180);
+
+
+
+
 }
