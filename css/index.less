@@ -145,6 +145,43 @@ body {
                 width     : 686px;
                 height    : 195px;
                 border    : solid 2px @color-border;
+
+                .decypher-fingerprints {
+                    width  : 576px;
+                    height : 144px;
+                    margin : 12px auto;
+                    display: flex;
+
+                    // background: paleturquoise;
+
+                    .decypher-fingerprint {
+                        position     : relative;
+                        width        : 144px;
+                        height       : 144px;
+                        // background: darkcyan;
+
+                        img {
+                            position: absolute;
+                            width   : 122px;
+                            height  : 122px;
+                            top     : 11px;
+                            left    : 11px;
+                            border  : solid 2px #383333;
+                        }
+
+                    }
+
+                    .active {
+                        border: solid 2px @color-border;
+
+                        img {
+                            top : 9px;
+                            left: 9px;
+                        }
+                    }
+
+                }
+
             }
 
         }

@@ -104,3 +104,29 @@ body {
   height: 195px;
   border: solid 2px #fafafa;
 }
+.container main .right .decypher .decypher-fingerprints {
+  width: 576px;
+  height: 144px;
+  margin: 12px auto;
+  display: flex;
+}
+.container main .right .decypher .decypher-fingerprints .decypher-fingerprint {
+  position: relative;
+  width: 144px;
+  height: 144px;
+}
+.container main .right .decypher .decypher-fingerprints .decypher-fingerprint img {
+  position: absolute;
+  width: 122px;
+  height: 122px;
+  top: 11px;
+  left: 11px;
+  border: solid 2px #383333;
+}
+.container main .right .decypher .decypher-fingerprints .active {
+  border: solid 2px #fafafa;
+}
+.container main .right .decypher .decypher-fingerprints .active img {
+  top: 9px;
+  left: 9px;
+}
