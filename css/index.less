@@ -128,14 +128,25 @@ body {
             margin: 13px 0 0 22px;
 
             .target {
-                width : 686px;
-                height: 665px;
-                border: solid 2px @color-border;
+                position: relative;
+                width   : 686px;
+                height  : 665px;
+                border  : solid 2px @color-border;
 
+                // 右侧大指纹
                 .target-fingerprint {
                     margin: 36px 0 0 25px;
                     width : 528px;
                     height: 528px;
+                }
+
+                // 右侧循环动画
+                .anime {
+                    position: absolute;
+                    width   : 68px;
+                    height  : 68px;
+                    right   : 20px;
+                    bottom  : 8px;
                 }
 
             }

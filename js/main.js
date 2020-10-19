@@ -1,5 +1,3 @@
-// 入口函数
-
 const fingerprints = [
     'imgs/fingerprints/1.png',
     'imgs/fingerprints/2.bmp',
@@ -14,11 +12,13 @@ const fingerprintsFragments = [
     'imgs/fingerprints/1.4.bmp',
 ];
 
+// 入口函数
 $(function () {
 
 
     startTimer();
 
+    loadAnime();
 
 });
 
@@ -76,4 +76,9 @@ function fotmatTime(m, s, ms) {
 
     let format = "{0}:{1}:{2}".format(m, s, ms);
     return format;
+}
+
+// 开始动画
+function loadAnime() {
+    
 }
