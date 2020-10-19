@@ -1,9 +1,20 @@
+// 
 @main-width : 1250px;
 @main-height: 910px;
 
-@background  : #000011;
-@border      : solid 2px #fafafa;
-@border-color: #fafafa;
+// 块标题高度
+@head-height: 22px;
+
+// 定义颜色
+@color-background : #000011;
+@color-border     :#fafafa;
+
+
+// 字体
+@font-face {
+    font-family: Num;
+    src        : url("../font/num.ttf")
+}
 
 
 * {
@@ -17,7 +28,7 @@ body {
     position  : relative;
     width     : 100%;
     height    : 100%;
-    background: @background;
+    background: @color-background;
 }
 
 #repository {
@@ -34,15 +45,15 @@ body {
     main {
         width     : @main-width;
         height    : @main-height;
-        background: @background;
+        background: @color-background;
 
-        border : @border;
+        border : solid 2px @color-border;
         display: flex;
 
         .head {
             width     : 100%;
-            height    : 22px;
-            background: @border-color;
+            height    : @head-height;
+            background: @color-border;
 
             p {
                 line-height: 22px;
@@ -61,14 +72,24 @@ body {
             .timeout {
                 width : 470px;
                 height: 98px;
-                border: @border;
+                border: solid 2px @color-border;
+
+                .timmer {
+                    p {
+                        line-height: calc(98px - @head-height - 4px);
+                        text-align : center;
+                        color      : #e47b7b;
+                        font-size  : 38px;
+                        font-family: Num, sans-serif;
+                    }
+                }
             }
 
             .component {
                 margin-top: 14px;
                 width     : 470px;
                 height    : 766px;
-                border    : @border;
+                border    : solid 2px @color-border;
 
 
 
@@ -91,7 +112,7 @@ body {
                             width : 122px;
                             height: 122px;
                             margin: 11px;
-                            border: @border;
+                            border: solid 2px @color-border;
 
                             cursor: pointer;
                         }
@@ -109,7 +130,7 @@ body {
             .target {
                 width : 686px;
                 height: 665px;
-                border: @border;
+                border: solid 2px @color-border;
 
                 .target-fingerprint {
                     margin: 36px 0 0 25px;
@@ -123,7 +144,7 @@ body {
                 margin-top: 18px;
                 width     : 686px;
                 height    : 195px;
-                border    : @border;
+                border    : solid 2px @color-border;
             }
 
         }
