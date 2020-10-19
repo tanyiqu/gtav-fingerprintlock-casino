@@ -7,51 +7,19 @@ html,
 body {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #1e1e1e;
+  background: #000011;
 }
-main {
-  width: 80%;
-  height: 80%;
-  background: pink;
-  display: flex;
-}
-main .left {
-  flex: 2;
-  height: 100%;
-  background: goldenrod;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .left .zws {
-  width: 220px;
-  height: 440px;
-  background: #fff;
-  display: flex;
-  flex-wrap: wrap;
-}
-main .left .zws .zw {
-  width: 100px;
-  height: 100px;
-  background: blanchedalmond;
-  margin: 5px 0 0 5px;
-}
-main .left .zws .zw img {
+.container {
   width: 100%;
   height: 100%;
-}
-main .right {
-  flex: 3;
-  height: 100%;
-  background: honeydew;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .right .qzw {
-  width: 360px;
-  height: 514px;
+.container main {
+  min-width: 1120px;
+  min-height: 630px;
+  width: 1250px;
+  height: 920px;
+  background: pink;
 }
