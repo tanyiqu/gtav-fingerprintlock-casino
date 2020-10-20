@@ -151,13 +151,40 @@ body {
                     height: 528px;
                 }
 
-                // 右侧循环动画
-                .anime {
+                // 右侧动画上面的标题
+                .access-attempts {
+                    position  : absolute;
+                    width     : 93px;
+                    height    : calc(@head-height * 2);
+                    top       : 58px;
+                    right     : 18px;
+                    background: @color-border;
+
+                    p {
+                        line-height: 22px;
+                        text-align : center;
+                        color      : #000;
+                        font-size  : 14px;
+                    }
+                }
+
+                // 右侧动画1
+                .anime1 {
+                    position: absolute;
+                    width   : 93px;
+                    height  : 436px;
+                    top     : 102px;
+                    right   : 18px;
+                    border  : solid 2px @color-border;
+                }
+
+                // 右侧动画2
+                .anime2 {
                     position: absolute;
                     width   : 68px;
                     height  : 68px;
-                    right   : 20px;
-                    bottom  : 8px;
+                    right   : 28px;
+                    bottom  : 12px;
                 }
 
             }
