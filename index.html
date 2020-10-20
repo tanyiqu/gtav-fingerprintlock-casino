@@ -9,6 +9,7 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/glitch.css">
     <link rel="stylesheet" href="./css/index.css">
 
     <!-- JS -->
@@ -20,12 +21,33 @@
 <body>
     <!-- 项目地址 -->
     <a id="repository" href="https://gitee.com/tanyiqu/gtav-fingerprintlock-trainer" target="_blank">项目地址</a>
+    
+    <img class="bg" src="imgs/bg.jpg" alt="">
 
     <div class="container">
-        <!-- 包裹主区域 -->
+
+        <!-- 背景等 -->
         <div class="pre">
-            <!-- <img id="pre" src="imgs/pre/01.jpg" alt=""> -->
+            <audio id="audio" src="sound/Funky Stars.mp3" autoplay loop>
+            </audio>
+            <script>
+                document.getElementById("audio").volume = 0.2;
+            </script>
+
+            <div class="text-magic" data-word="FINGERPRINT  HACK">
+                <div class="white"></div>
+            </div>
+
+            <div class="start">
+                <h4>START</h4>
+            </div>
+
+            <div class="author">
+                <h4>Code by tanyiqu</h4>
+            </div>
         </div>
+
+        <!-- 包裹主区域 -->
         <div class="main" style="display: none;">
             <main id="main">
                 <div class="left">
