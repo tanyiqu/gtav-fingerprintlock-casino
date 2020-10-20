@@ -121,9 +121,16 @@ body {
   align-items: center;
 }
 .container main .left .component .countdown-div .area .countdown {
-  width: 376px;
+  width: 354px;
   height: 58px;
-  background: palegoldenrod;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container main .left .component .countdown-div .area .countdown .tick {
+  width: 6px;
+  height: 80%;
+  background: #e47b7b;
 }
 .container main .right {
   flex: 1;

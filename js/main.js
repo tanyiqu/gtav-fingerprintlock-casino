@@ -28,7 +28,9 @@ function startTimer() {
     let m = 3;
     let s = 59;
     let ms = 99;
-
+    // 剩余条形计时
+    let rest = 30;
+    let count = 0;
     $('#timmer').text(fotmatTime(m, s, ms));
 
     let id = setInterval(() => {
@@ -51,6 +53,18 @@ function startTimer() {
                     m--;
                 }
             }
+
+            // 条形计时器 周期为8s，每8s熄灭一个
+            count++;
+            if (count == 8) {
+                count = 0;
+                let id = '#tick' + rest;
+                $(id).css('background', '#000');
+                rest--;
+            }
+
+
+
         }
         ms -= 3;
         $('#timmer').text(fotmatTime(m, s, ms));
