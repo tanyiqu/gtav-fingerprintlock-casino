@@ -72,7 +72,20 @@ body {
                 color      : #000;
                 font-size  : 14px;
             }
+        }
 
+        .invers-head {
+            width        : 100%;
+            height       : calc(@head-height + 2px);
+            background   : #000;
+            border-bottom: solid 2px @color-border;
+
+            p {
+                line-height: 22px;
+                text-align : center;
+                color      : #fff;
+                font-size  : 14px;
+            }
         }
 
         .left {
@@ -97,12 +110,11 @@ body {
             }
 
             .component {
-                margin-top: 14px;
+                position  : relative;
                 width     : 470px;
                 height    : 766px;
+                margin-top: 14px;
                 border    : solid 2px @color-border;
-
-
 
                 .fragments {
                     width        : 288px;
@@ -130,6 +142,32 @@ body {
 
                     }
                 }
+
+                .countdown-div {
+                    position: absolute;
+                    width   : 422px;
+                    height  : 98px;
+                    left    : 22px;
+                    bottom  : 22px;
+                    border  : solid 2px @color-border;
+
+                    .area {
+                        width : 100%;
+                        height: calc(100% - @head-height - 2px);
+
+                        display        : flex;
+                        justify-content: center;
+                        align-items    : center;
+
+                        .countdown {
+                            width     : 376px;
+                            height    : 58px;
+                            background: palegoldenrod;
+                        }
+
+                    }
+                }
+
             }
         }
 
