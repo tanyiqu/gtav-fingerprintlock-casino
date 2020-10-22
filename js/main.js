@@ -109,7 +109,7 @@ function startTimer() {
 // 随机新指纹
 function randomNext() {
     // 清除所有选中的样式
-
+    $('.fragment').removeClass('active');
     // 随机右侧大指纹
     let targetSrc = 'imgs/fingerprints/' + currTarget + '.png';
     $('.target-fingerprint').attr('src', targetSrc);
@@ -121,8 +121,6 @@ function randomNext() {
         let id = '#fragment' + i;
         $(id).attr('src', fragments[i - 1].src);
     }
-
-
 }
 
 // 随机左边的小指纹碎片
@@ -158,6 +156,11 @@ function randomFragments() {
         status: false
     });
     return shuffle(fragments);
+}
+
+// 判断是否匹配
+function isCorrect() {
+    return true;
 }
 
 // 计时结束
