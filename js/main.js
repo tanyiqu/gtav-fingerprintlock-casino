@@ -12,6 +12,8 @@ const fingerprintsFragments = [
     'imgs/fingerprints/1.4.bmp',
 ];
 
+let currTarget = 1;
+
 // 入口函数
 $(function () {
     loadEvents();
@@ -32,6 +34,7 @@ function onStart() {
     $('.main').show(500);
     $('.bg').hide();
     startTimer();
+    randomNext();
 }
 
 // 开启计时
@@ -80,6 +83,45 @@ function startTimer() {
 
 }
 
+// 随机新指纹
+function randomNext() {
+    // 清除所有选中的样式
+
+    // 随机右侧大指纹
+    let targetSrc = 'imgs/fingerprints/' + currTarget + '.png';
+    $('.target-fingerprint').attr('src', targetSrc);
+
+    // 随机左边的小指纹碎片
+    let fragments = randomFragments();
+    console.log(fragments);
+
+
+}
+
+// 随机左边的小指纹碎片
+function randomFragments() {
+    let fragments = [
+        'imgs/fingerprints/' + currTarget + '.1.bmp',
+        'imgs/fingerprints/' + currTarget + '.2.bmp',
+        'imgs/fingerprints/' + currTarget + '.3.bmp',
+        'imgs/fingerprints/' + currTarget + '.4.bmp',
+    ];
+    let tmp = currTarget;
+    let n = 3;
+    while (n--) {
+        if (tmp === 4) {
+            tmp = 1;
+        } else {
+            tmp++;
+        }
+        fragments.push('imgs/fingerprints/' + tmp + '.' + rand() + '.bmp');
+    }
+    fragments.push('imgs/fingerprints/' + tmp + '.4.bmp');
+
+    return shuffle(fragments);
+}
+
+// 计时结束
 function onTimeout() {
     alert('计时结束，请点击刷新重新开始！');
 }
