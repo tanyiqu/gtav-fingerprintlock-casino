@@ -124,7 +124,7 @@ body {
   filter: opacity(0.65);
 }
 .container main .left .component .fragments .fragment:hover {
-  border: solid 2px #fff;
+  border: solid 2px #a2a2a8;
   width: 140px;
   height: 140px;
 }

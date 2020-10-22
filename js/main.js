@@ -25,11 +25,11 @@ function loadEvents() {
     $('.music').click(() => {
         if (playMusic) {
             document.getElementById("audio").volume = 0;
-            $('.music').attr('src','imgs/mute_active.png');
+            $('.music').attr('src', 'imgs/mute_active.png');
             playMusic = false;
         } else {
             document.getElementById("audio").volume = 0.2;
-            $('.music').attr('src','imgs/mute.png');
+            $('.music').attr('src', 'imgs/mute.png');
             playMusic = true;
         }
     });
@@ -38,6 +38,16 @@ function loadEvents() {
     // 点击作者
     $('.author').click(() => {
         window.open('https://github.com/tanyiqu', '_blank');
+    });
+    // 点击左侧小指纹
+    $('.fragment').click((e) => {
+        let div = $(e.target.parentElement);
+
+        if (div.hasClass('active')) {
+            div.removeClass('active');
+        } else {
+            div.addClass('active');
+        }
     });
 }
 
@@ -109,16 +119,24 @@ function randomNext() {
     console.log(fragments);
 
 
+
 }
 
 // 随机左边的小指纹碎片
 function randomFragments() {
-    let fragments = [
-        'imgs/fingerprints/' + currTarget + '.1.bmp',
-        'imgs/fingerprints/' + currTarget + '.2.bmp',
-        'imgs/fingerprints/' + currTarget + '.3.bmp',
-        'imgs/fingerprints/' + currTarget + '.4.bmp',
-    ];
+    let fragments = [{
+        src: 'imgs/fingerprints/' + currTarget + '.1.bmp',
+        status: true
+    }, {
+        src: 'imgs/fingerprints/' + currTarget + '.2.bmp',
+        status: true
+    }, {
+        src: 'imgs/fingerprints/' + currTarget + '.3.bmp',
+        status: true
+    }, {
+        src: 'imgs/fingerprints/' + currTarget + '.4.bmp',
+        status: true
+    }];
     let tmp = currTarget;
     let n = 3;
     while (n--) {
@@ -127,10 +145,15 @@ function randomFragments() {
         } else {
             tmp++;
         }
-        fragments.push('imgs/fingerprints/' + tmp + '.' + rand() + '.bmp');
+        fragments.push({
+            src: 'imgs/fingerprints/' + tmp + '.' + rand() + '.bmp',
+            status: false
+        });
     }
-    fragments.push('imgs/fingerprints/' + tmp + '.4.bmp');
-
+    fragments.push({
+        src: 'imgs/fingerprints/' + tmp + '.4.bmp',
+        status: false
+    });
     return shuffle(fragments);
 }
 
