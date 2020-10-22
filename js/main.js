@@ -49,6 +49,18 @@ function loadEvents() {
             div.addClass('active');
         }
     });
+    // tab键开始检测
+    window.onkeypress = function (e) {
+        if (e.key === 'Enter') {
+            if (check()) {
+                currTarget++;
+                if (currTarget === 5) {
+                    currTarget = 1;
+                }
+                randomNext();
+            }
+        }
+    }
 }
 
 // 点击开始
@@ -90,7 +102,6 @@ function startTimer() {
                     m--;
                 }
             }
-
             // 条形计时器 周期为8s，每8s熄灭一个
             count++;
             if (count == 8) {
@@ -159,7 +170,8 @@ function randomFragments() {
 }
 
 // 判断是否匹配
-function isCorrect() {
+function check() {
+    // alert('成功');
     return true;
 }
 
@@ -170,7 +182,6 @@ function onTimeout() {
 
 // 格式化计时时间
 function fotmatTime(m, s, ms) {
-
     if ((m + '').length < 2) {
         m = ('0' + m);
     }
