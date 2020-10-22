@@ -14,13 +14,23 @@ const fingerprintsFragments = [
 
 // 入口函数
 $(function () {
-    $('.start').click(onStart);
+    loadEvents();
 });
+
+function loadEvents() {
+    // 点击Start
+    $('.start').click(onStart);
+    // 点击作者
+    $('.author').click(() => {
+        window.open('https://github.com/tanyiqu', '_blank');
+    });
+}
 
 // 点击开始
 function onStart() {
     $('.pre').css('display', 'none');
-    $('.main').show(200);
+    $('.main').show(500);
+    $('.bg').hide();
     startTimer();
 }
 

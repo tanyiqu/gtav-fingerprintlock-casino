@@ -5,6 +5,12 @@
 * {
   margin: 0;
   padding: 0;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 html,
 body {
@@ -101,13 +107,27 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.container main .left .component .fragments .active img {
+  filter: opacity(1) !important;
+}
 .container main .left .component .fragments .fragment {
   width: 144px;
   height: 144px;
 }
+.container main .left .component .fragments .fragment img {
+  filter: opacity(0.65);
+}
+.container main .left .component .fragments .fragment:hover {
+  border: solid 2px #fff;
+  width: 140px;
+  height: 140px;
+}
+.container main .left .component .fragments .fragment:hover .fingerprint {
+  margin: 9px;
+}
 .container main .left .component .fragments .fragment .fingerprint {
-  width: 122px;
-  height: 122px;
+  width: 118px;
+  height: 118px;
   margin: 11px;
   border: solid 2px #fafafa;
   cursor: pointer;
