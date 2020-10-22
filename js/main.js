@@ -71,7 +71,7 @@ function startTimer() {
 }
 
 function onTimeout() {
-    alert('计时结束');
+    alert('计时结束，请点击刷新重新开始！');
 }
 
 // 格式化计时时间
