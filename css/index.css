@@ -114,14 +114,11 @@ body {
   flex-wrap: wrap;
 }
 .container main .left .component .fragments .active img {
-  filter: opacity(1) !important;
+  border: solid 2px #fafafa !important;
 }
 .container main .left .component .fragments .fragment {
   width: 144px;
   height: 144px;
-}
-.container main .left .component .fragments .fragment img {
-  filter: opacity(0.65);
 }
 .container main .left .component .fragments .fragment:hover {
   border: solid 2px #a2a2a8;
@@ -135,7 +132,7 @@ body {
   width: 118px;
   height: 118px;
   margin: 11px;
-  border: solid 2px #fafafa;
+  border: solid 2px #1f221f;
   cursor: pointer;
 }
 .container main .left .component .countdown-div {

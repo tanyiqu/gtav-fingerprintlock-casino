@@ -116,8 +116,11 @@ function randomNext() {
 
     // 随机左边的小指纹碎片
     let fragments = randomFragments();
-    console.log(fragments);
-
+    // console.log(fragments);
+    for (let i = 1; i <= 8; i++) {
+        let id = '#fragment' + i;
+        $(id).attr('src', fragments[i - 1].src);
+    }
 
 
 }
