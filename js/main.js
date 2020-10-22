@@ -13,6 +13,7 @@ const fingerprintsFragments = [
 ];
 
 let currTarget = 1;
+let playMusic = true;
 
 // 入口函数
 $(function () {
@@ -20,6 +21,18 @@ $(function () {
 });
 
 function loadEvents() {
+    // 音乐开关
+    $('.music').click(() => {
+        if (playMusic) {
+            document.getElementById("audio").volume = 0;
+            $('.music').attr('src','imgs/mute_active.png');
+            playMusic = false;
+        } else {
+            document.getElementById("audio").volume = 0.2;
+            $('.music').attr('src','imgs/mute.png');
+            playMusic = true;
+        }
+    });
     // 点击Start
     $('.start').click(onStart);
     // 点击作者

@@ -48,14 +48,14 @@ function randInt(minNum, maxNum) {
 
 // 洗牌算法
 function shuffle(arr) {
-    if(!Array.isArray(arr) && arr.length) {
-      return []
+    if (!Array.isArray(arr) && arr.length) {
+        return []
     }
     const res = []
-    for(let i = arr.length; i > 0; i --) {
-      const idx = Math.floor(Math.random() * i)
-      res.push(arr[idx])
-      arr.splice(idx, 1)
+    for (let i = arr.length; i > 0; i--) {
+        const idx = Math.floor(Math.random() * i)
+        res.push(arr[idx])
+        arr.splice(idx, 1)
     }
     return res
-  }
+}

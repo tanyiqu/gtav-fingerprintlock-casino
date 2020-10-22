@@ -31,6 +31,12 @@ body {
   object-fit: cover;
   z-index: -2;
 }
+.music {
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
 .container {
   width: 100%;
   height: 100%;
