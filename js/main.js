@@ -121,6 +121,8 @@ function startTimer() {
 function randomNext() {
     // 清除所有选中的样式
     $('.fragment').removeClass('active');
+    $('.decypher-fingerprint').removeClass('active');
+
     // 随机右侧大指纹
     let targetSrc = 'imgs/fingerprints/' + currTarget + '.png';
     $('.target-fingerprint').attr('src', targetSrc);
@@ -132,6 +134,9 @@ function randomNext() {
         let id = '#fragment' + i;
         $(id).attr('src', fragments[i - 1].src);
     }
+    
+    // 右侧底部的第几个指纹标识
+    $('#decypher' + currTarget).addClass('active');
 }
 
 // 随机左边的小指纹碎片
