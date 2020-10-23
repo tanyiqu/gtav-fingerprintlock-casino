@@ -252,9 +252,6 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-.start h4:hover {
-  background: pink;
-}
 .author {
   position: absolute;
   bottom: 0;
