@@ -15,6 +15,9 @@ const fingerprintsFragments = [
 let currTarget = 1;
 let playMusic = true;
 
+// 左边8个小指纹
+let fragments = [];
+
 // 入口函数
 $(function () {
     loadEvents();
@@ -128,20 +131,19 @@ function randomNext() {
     $('.target-fingerprint').attr('src', targetSrc);
 
     // 随机左边的小指纹碎片
-    let fragments = randomFragments();
-    // console.log(fragments);
+    fragments = randomFragments();
     for (let i = 1; i <= 8; i++) {
         let id = '#fragment' + i;
         $(id).attr('src', fragments[i - 1].src);
     }
-    
+
     // 右侧底部的第几个指纹标识
     $('#decypher' + currTarget).addClass('active');
 }
 
 // 随机左边的小指纹碎片
 function randomFragments() {
-    let fragments = [{
+    fragments = [{
         src: 'imgs/fingerprints/' + currTarget + '.1.bmp',
         status: true
     }, {
@@ -176,8 +178,29 @@ function randomFragments() {
 
 // 判断是否匹配
 function check() {
-    // alert('成功');
-    return true;
+    // 获取读取选中的指纹
+    let fragment = $('.fragment');
+    let list = [];
+    $.each(fragment, (index, item) => {
+        if ($(item).hasClass('active')) {
+            list.push(index);
+        }
+    });
+
+    console.log(fragments);
+    
+    console.log(list);
+
+    if (list.length !== 4) {
+        return false;
+    } else {
+        return (
+            fragments[list[0]].status &&
+            fragments[list[1]].status &&
+            fragments[list[2]].status &&
+            fragments[list[3]].status
+        );
+    }
 }
 
 // 计时结束
