@@ -122,7 +122,8 @@ function startTimer() {
 
 // 随机新指纹
 function randomNext() {
-    // 清除所有选中的样式
+    // 清除所有样式
+    $('.fingerprint').attr('src', 'imgs/fingerprints/none.bmp');
     $('.fragment').removeClass('active');
     $('.decypher-fingerprint').removeClass('active');
 
@@ -188,7 +189,7 @@ function check() {
     });
 
     console.log(fragments);
-    
+
     console.log(list);
 
     if (list.length !== 4) {
