@@ -56,11 +56,14 @@ function loadEvents() {
     window.onkeypress = function (e) {
         if (e.key === 'Enter') {
             if (check()) {
+                toastr.success('Success!');
                 currTarget++;
                 if (currTarget === 5) {
                     currTarget = 1;
                 }
                 randomNext();
+            } else {
+                toastr.error('Failed! Please check and try again');
             }
         }
     }
