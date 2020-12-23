@@ -1,15 +1,15 @@
 const fingerprints = [
-    'imgs/fingerprints/1.png',
-    'imgs/fingerprints/2.bmp',
-    'imgs/fingerprints/3.bmp',
-    'imgs/fingerprints/4.bmp'
+    'imgs/fingerprints/1.jpg',
+    'imgs/fingerprints/2.jpg',
+    'imgs/fingerprints/3.jpg',
+    'imgs/fingerprints/4.jpg'
 ];
 
 const fingerprintsFragments = [
-    'imgs/fingerprints/1.1.bmp',
-    'imgs/fingerprints/1.2.bmp',
-    'imgs/fingerprints/1.3.bmp',
-    'imgs/fingerprints/1.4.bmp',
+    'imgs/fingerprints/1.1.jpg',
+    'imgs/fingerprints/1.2.jpg',
+    'imgs/fingerprints/1.3.jpg',
+    'imgs/fingerprints/1.4.jpg',
 ];
 
 let currTarget = 1;
@@ -126,12 +126,12 @@ function startTimer() {
 // 随机新指纹
 function randomNext() {
     // 清除所有样式
-    $('.fingerprint').attr('src', 'imgs/fingerprints/none.bmp');
+    $('.fingerprint').attr('src', 'imgs/fingerprints/none.jpg');
     $('.fragment').removeClass('active');
     $('.decypher-fingerprint').removeClass('active');
 
     // 随机右侧大指纹
-    let targetSrc = 'imgs/fingerprints/' + currTarget + '.png';
+    let targetSrc = 'imgs/fingerprints/' + currTarget + '.jpg';
     $('.target-fingerprint').attr('src', targetSrc);
 
     // 随机左边的小指纹碎片
@@ -148,16 +148,16 @@ function randomNext() {
 // 随机左边的小指纹碎片
 function randomFragments() {
     fragments = [{
-        src: 'imgs/fingerprints/' + currTarget + '.1.bmp',
+        src: 'imgs/fingerprints/' + currTarget + '.1.jpg',
         status: true
     }, {
-        src: 'imgs/fingerprints/' + currTarget + '.2.bmp',
+        src: 'imgs/fingerprints/' + currTarget + '.2.jpg',
         status: true
     }, {
-        src: 'imgs/fingerprints/' + currTarget + '.3.bmp',
+        src: 'imgs/fingerprints/' + currTarget + '.3.jpg',
         status: true
     }, {
-        src: 'imgs/fingerprints/' + currTarget + '.4.bmp',
+        src: 'imgs/fingerprints/' + currTarget + '.4.jpg',
         status: true
     }];
     let tmp = currTarget;
@@ -169,12 +169,12 @@ function randomFragments() {
             tmp++;
         }
         fragments.push({
-            src: 'imgs/fingerprints/' + tmp + '.' + rand() + '.bmp',
+            src: 'imgs/fingerprints/' + tmp + '.' + rand() + '.jpg',
             status: false
         });
     }
     fragments.push({
-        src: 'imgs/fingerprints/' + tmp + '.4.bmp',
+        src: 'imgs/fingerprints/' + tmp + '.4.jpg',
         status: false
     });
     return shuffle(fragments);
@@ -223,9 +223,7 @@ function fotmatTime(m, s, ms) {
     if ((ms + '').length < 2) {
         ms = ('0' + ms);
     }
-
-    let format = "{0}:{1}:{2}".format(m, s, ms);
-    return format;
+    return `${m}:${s}:${ms}`;
 }
 
 // 开始动画
